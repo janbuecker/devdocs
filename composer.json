@@ -6,7 +6,6 @@
     "bcremer/sculpin-commonmark-bundle": "^0.4.0",
     "mavimo/sculpin-redirect-bundle": "@dev",
     "webuni/commonmark-table-extension": "^0.6.0",
-    "janbuecker/sculpin-meta-navigation-bundle": "^0.4",
     "ivopetkov/html5-dom-document-php": "^0.4.1"
   },
   "autoload": {

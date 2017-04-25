@@ -1,0 +1,1 @@
+/Users/jb/web/devdocs/source/v5.0.0/developers-guide/shopware-5-core-service-extensions/index.md

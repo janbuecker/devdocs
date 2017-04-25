@@ -27,7 +27,7 @@
           title="Shopware Developer blog feed"/>
 </head>
 
-<body>
+<body data-site-url="{{ site.url }}">
 <div class="wrapper">
 
     <header class="header--main">
@@ -88,6 +88,15 @@
 
                 {% endfor %}
             </ul>
+
+            <div id="versionSwitch">
+                <select name="__version">
+                    <option disabled="disabled">Choose a version</option>
+                    {% for version in page.versions %}
+                        <option value="{{ version }}">{{ version }}</option>
+                    {% endfor %}
+                </select>
+            </div>
         </div>
     </nav>
 

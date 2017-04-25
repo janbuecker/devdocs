@@ -1,0 +1,1 @@
+/Users/jb/web/devdocs/source/v5.0.0/designers-guide/legacy-template-development-in-shopware-5/index.md

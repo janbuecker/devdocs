@@ -35,4 +35,36 @@ $(function() {
 
     // Code highlighter
     hljs.initHighlightingOnLoad();
+
+    var siteUrl = $('body').data('site-url');
+    var currentVersion = getCurrentVersion();
+
+    // enable version switch
+    $('#versionSwitch').find('> select')
+        .find('option')
+            .each(function (index, option) {
+                var $option = $(option);
+
+                $option.removeAttr('selected');
+                if (option.value == currentVersion) {
+                    $option.attr('selected', 'selected');
+                }
+            })
+            .end()
+        .on('change', function (event) {
+            var $select = $(this)[0],
+                selectedVersion = $select.value;
+
+            window.location.href = siteUrl + '/' + selectedVersion + '/';
+        });
+
+    function getCurrentVersion() {
+        var matches = window.location.pathname.match(/\/(v\d\.\d\.\d|latest)/);
+
+        if (matches && matches[1]) {
+            return matches[1];
+        }
+
+        return 'latest';
+    }
 });
